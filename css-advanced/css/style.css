@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	/* margin-top: 70px; */
+	/* display: flex;
+	align-items: center;
+    justify-content: center; */
+}
+p {
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 10px;
+	margin: 10px;
+}
+/* 
+  The transition-timing-function property can have the following values:
+
+ease - specifies a transition effect with a slow start, then     fast, then end slowly (this is default)
+linear - specifies a transition effect with the same speed from start to end
+ease-in - specifies a transition effect with a slow start
+ease-out - specifies a transition effect with a slow end
+ease-in-out - specifies a transition effect with a slow start and end
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
+*/
+
+.transition {
+	width: 100px;
+	height: 100px;
+	background: green;
+	/* 
+          transition-property: width;
+          transition-duration: 2s;
+          transition-timing-function: linear;
+          transition-delay: 1s;
+    */
+	transition: width 2s, height 2s, transfrom 2s;
+}
+.transition:hover {
+	width: 300px;
+	height: 600px;
+	background: red;
+	border-radius: 20px;
+}
+
+/* 
+    With the CSS transform property you can use the following 3D transformation methods:
+
+    rotateX()  method rotates an element around its X-axis at a given degree.
+    rotateY() method rotates an element around its Y-axis at a given degree
+    rotateZ() method rotates an element around its Z-axis at a given degree
+
+*/
+.transform {
+	/* transform: rotateX(150deg); */
+	/* transform: rotateY(150deg); */
+	/* transform: rotateZ(100deg); */
+	/* transform: translateY(100px); */
+	/* transform: translateX(100px); */
+	/* transform: translate3d(1); */
+	/* transform: scaleX(2); */
+	/* transform: scaleY(3); */
+	/* transform: scale3d(2,3,7); */
+	transform: perspective();
+}
+.transform:hover {
+	/* transform: rotate(200deg); */
+}
+.div {
+	background: #333;
+	color: #fff;
+	width: 200px;
+	height: 90px;
+	position: relative;
+	left: 20px;
+	transition: .5s;
+}
+p {
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+/* 
+    CSS Text Overflow, Word Wrap, Line Breaking Rules, and Writing Modes
+    In this chapter you will learn about the following properties:
+
+   1- text-overflow: property specifies how overflowed content that is not displayed should be signaled to the user.
+   2- word-wrap: property allows long words to be able to be broken and wrap onto the next line.
+   3- word-break
+   4- writing-mode
+*/
+p.text1 {
+	white-space: nowrap;
+	width: 200xp;
+	border: 1px solid #000;
+	overflow: hidden;
+	text-overflow: clip;
+	word-break: break-all;
+}
+p.text2 {
+	white-space: nowrap;
+	width: 200xp;
+	border: 1px solid #000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: keep-all;
+	writing-mode: horizontal-tb;
+}
+p.text1:hover {
+	/* overflow: visible; */
+}
+.wrap {
+	width: 100%;
+	background: linear-gradient(rgb(218, 202, 202), rgb(180, 226, 180), rgb(147, 147, 219));
+	color: rgb(148, 87, 38);
+	border-radius: 15px;
+	padding-bottom: 30px;
+	border: 1px solid rgb(231, 220, 220);
+	word-wrap: break-word;
+}
+/* text-shadow and box-shadow */
+.text-shadow {
+	text-shadow: 2px 2px; /* horizontal and vertical shadow */
+	text-shadow: 2px 2px red; /* horizontal and vertical shadow and color */
+	text-shadow: 2px 2px 5px red; /* horizontal and vertical shadow and blur effect color */
+}
+.text-shadow-white {
+	color: white;
+	text-shadow: 2px 2px 4px #333;
+}
+.text-shadow-white-black {
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.text-shadow-red {
+	text-shadow: 0 0 3px #ff0000;
+}
+.text-shadow-blue {
+	text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+.border-shadow {
+	color: yellow;
+	text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
+}
+.box-shadow {
+	background: indigo;
+	color: #fff;
+	width: 500px;
+	height: 100px;
+	margin: 30px;
+	box-shadow: 10px 10px 5px gray;
+}

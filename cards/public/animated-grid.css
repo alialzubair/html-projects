@@ -1,0 +1,42 @@
+
+   
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:#353535;
+    font-size:3rem;
+    color:#fff;
+    box-shadow: rgba(3,8,20,0.1)0 0.15rem,rgba(2,8,20,0.1) 0px 0.075rem .0.175rem;
+    height:100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow:hidden;
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+.card:hover{
+    box-shadow: rgba(2,8,20,0.1)0px 0.35em 1.175em,rgba(2,8,20,0.1) 0px 0.175em 0.5em;
+}
+.animated-grid{
+    height:100vw ;
+    display: grid;
+    gap:1rem;
+    /* explicit grid */
+    grid-template-areas: 
+       'a  b  c  d'
+       'l   main  main  e'
+       'k  main  mian  f'
+       'j  i  h   g';
+    grid-template-rows: repeat(4,25%);
+    grid-template-columns: 240px auto auto 240px;
+}
+.a{
+    grid-area: a;
+}
+
+
+

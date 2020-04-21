@@ -1,0 +1,221 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.app-header {
+  background-color: #cc0000;
+  -webkit-box-shadow: 3px 3px 10px #888;
+          box-shadow: 3px 3px 10px #888;
+}
+
+.app-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 10px;
+}
+
+.app-header .logo {
+  width: 120px;
+  margin-bottom: 16px;
+}
+
+.app-header .search {
+  width: 210px;
+  padding: 7px;
+  border: 0;
+  border-radius: 3px;
+}
+
+.subheader {
+  background: #7c0000;
+  -webkit-box-shadow: 3px 3px 10px #888;
+          box-shadow: 3px 3px 10px #888;
+  margin: 0 auto 16px auto;
+  width: 90%;
+  font-size: 14px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subheader p {
+  margin: 4px;
+}
+
+.subheader img {
+  width: 40px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: solid #ccc 1px;
+  -webkit-box-shadow: 1px 1px 2px #ccc;
+          box-shadow: 1px 1px 2px #ccc;
+}
+
+.grid .item img {
+  width: 30px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.grid .item h4 {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.grid .item p {
+  font-size: 14px;
+  padding: 5px;
+  color: #7c0000;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.app-footer {
+  background-color: #f4f4f4;
+  color: #444;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.app-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.app-footer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-footer ul li i {
+  font-size: 32px;
+  color: #cc0000;
+}
+
+#splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #cc0000;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#splash img {
+  width: 300px;
+}
+
+#splash.fade {
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .grid .item img {
+    width: 70px;
+  }
+}
